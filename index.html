@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talita Moretti — Personal Trainer em Blumenau/SC | Presencial e Online</title>
+<meta name="description" content="Personal Trainer em Blumenau/SC. Treinamento personalizado presencial e Consultoria Online com acompanhamento profissional. Agende sua avaliação." />
+<meta name="theme-color" content="#13534c" />
+<meta property="og:title" content="Talita Moretti — Personal Trainer | Blumenau/SC" />
+<meta property="og:description" content="Treinamento personalizado presencial e Consultoria Online. Resultados com segurança e individualidade." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Playfair+Display:ital,wght@0,600;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+:root{
+  --green-900:#0e3d38;
+  --green-800:#13534c;
+  --green-700:#1c6a5f;
+  --green-500:#0f7a6c;
+  --lime:#ed5e6e;
+  --lime-soft:#ffd6dc;
+  --coral:#ff7a90;
+  --cream:#f3f7f5;
+  --cream-2:#e2ece8;
+  --ink:#16302c;
+  --muted:#5d706b;
+  --white:#ffffff;
+  --radius:22px;
+  --radius-sm:14px;
+  --shadow:0 18px 50px -20px rgba(15,38,32,.35);
+  --shadow-soft:0 10px 30px -16px rgba(15,38,32,.3);
+  --maxw:1180px;
+  --font-head:'Fraunces',Georgia,serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{position:relative}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--green-500);
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--lime);border-radius:2px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:1rem;
+  padding:15px 28px;border-radius:999px;
+  cursor:pointer;border:none;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--lime);color:#fff}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(237,94,110,.5)}
+.btn-dark{background:var(--green-800);color:#fff}
+.btn-dark:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-outline{background:transparent;border:1.5px solid var(--green-700);color:var(--green-800)}
+.btn-outline:hover{background:var(--green-800);color:#fff;transform:translateY(-3px)}
+.btn-soon{background:rgba(15,122,108,.08);color:var(--green-700);border:1.5px dashed var(--green-500);font-weight:600}
+.btn-soon:hover{background:rgba(15,122,108,.16);transform:translateY(-2px)}
+
+/* Header */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  transition:all .3s ease;padding:18px 0;
+}
+header.scrolled{background:rgba(243,247,245,.92);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 6px 20px -16px rgba(0,0,0,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mark{height:46px;flex-shrink:0;display:flex;align-items:center}
+.brand .mark img{height:100%;width:auto;display:block}
+.brand .wm{display:block;font-family:'Playfair Display',var(--font-head);font-style:italic;font-weight:600;font-size:1.55rem;line-height:.95;color:#0f6157;letter-spacing:.01em}
+.brand small{display:block;font-style:normal;font-family:var(--font-body);font-weight:600;font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:#7f938d;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-weight:600;font-size:.95rem;color:var(--green-800);transition:color .2s}
+.nav-links a:hover{color:var(--green-500)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.menu-toggle span{width:26px;height:2.5px;background:var(--green-800);border-radius:3px;transition:.3s}
+
+/* Hero */
+.hero{
+  padding:160px 0 90px;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(47,111,94,.18), transparent 60%),
+    var(--cream);
+  overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);color:var(--green-900);margin:18px 0 22px}
+.hero h1 .accent{color:var(--green-500);position:relative;white-space:nowrap}
+.hero h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:12px;background:var(--lime);opacity:.45;z-index:-1;border-radius:4px}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+.hero-stats .stat strong{font-family:var(--font-head);font-size:1.9rem;color:var(--green-800);display:block;line-height:1}
+.hero-stats .stat span{font-size:.85rem;color:var(--muted);font-weight:600}
+.hero-visual{position:relative}
+.hero-photo{
+  border-radius:28px;overflow:hidden;box-shadow:var(--shadow);
+  aspect-ratio:4/5;background:linear-gradient(160deg,var(--green-700),var(--green-900));
+  position:relative;display:grid;place-items:center;
+}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-fallback{color:rgba(255,255,255,.4);text-align:center;padding:30px;font-size:.9rem}
+.photo-fallback .big{font-family:var(--font-head);font-size:2rem;color:rgba(255,255,255,.55);display:block;margin-bottom:8px}
+.float-card{
+  position:absolute;background:rgba(255,255,255,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:18px;padding:16px 20px;box-shadow:var(--shadow-soft);
+  display:flex;align-items:center;gap:12px;font-weight:600;font-size:.9rem;
+  transition:opacity .55s ease,transform .55s ease;min-width:212px;
+}
+.float-card .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--lime);font-size:1.2rem;flex-shrink:0}
+.float-card b{font-weight:700}
+.float-card small{display:block;font-weight:500;color:var(--muted);font-size:.78rem}
+.float-card.solo{bottom:24px;left:-16px}
+
+/* Trust bar */
+.trust{background:var(--green-800);color:#fff;padding:22px 0}
+.trust .container{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:center;text-align:center}
+.trust span{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:8px}
+.trust span .dot{color:var(--lime)}
+
+/* Section heading */
+.sec-head{max-width:680px;margin-bottom:48px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);color:var(--green-900);margin:14px 0 16px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+.pad{padding:90px 0}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.about-photo{border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(160deg,var(--cream-2),#cfe0d9);box-shadow:var(--shadow-soft);display:grid;place-items:center;position:relative}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-photo .photo-fallback .big{color:var(--green-500)}
+.about-credentials{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.cred{background:var(--white);border:1px solid var(--cream-2);border-radius:var(--radius-sm);padding:16px 18px}
+.cred strong{display:block;font-family:var(--font-head);color:var(--green-800);font-size:1.05rem}
+.cred span{font-size:.82rem;color:var(--muted)}
+
+/* Services */
+.services{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc{
+  background:var(--white);border-radius:var(--radius);padding:32px 28px;
+  border:1px solid rgba(0,0,0,.04);box-shadow:var(--shadow-soft);
+  display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease;
+  position:relative;overflow:hidden;
+}
+.svc:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.svc.feature{background:var(--green-800);color:#fff}
+.svc.feature .svc-desc,.svc.feature .svc-list li{color:rgba(255,255,255,.82)}
+.svc .badge{position:absolute;top:18px;right:18px;background:var(--lime);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.svc .svc-ic{width:54px;height:54px;border-radius:16px;background:var(--lime);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
+.svc.feature .svc-ic{background:var(--lime)}
+.svc h3{font-size:1.5rem;margin-bottom:10px}
+.svc.feature h3{color:#fff}
+.svc-desc{color:var(--muted);font-size:.96rem;margin-bottom:18px}
+.svc-list{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:9px}
+.svc-list li{font-size:.92rem;display:flex;align-items:flex-start;gap:9px;font-weight:500}
+.svc-list li::before{content:"✓";color:var(--green-500);font-weight:800;flex-shrink:0}
+.svc.feature .svc-list li::before{color:var(--lime)}
+.svc .btn{margin-top:auto;width:100%}
+
+/* Especialidades */
+.spec{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.spec-card{background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow-soft);transition:transform .3s ease,box-shadow .3s ease;display:flex;gap:16px;align-items:flex-start}
+.spec-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.spec-card.t{border-top:4px solid var(--green-800)}
+.spec-card.c{border-top:4px solid var(--lime)}
+.spec-card .si{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.spec-card.t .si{background:#d9eee9}
+.spec-card.c .si{background:#ffe2e6}
+.spec-card h3{font-size:1.12rem;color:var(--green-900);margin-bottom:5px;font-family:var(--font-head)}
+.spec-card p{font-size:.88rem;color:var(--muted)}
+
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+.step{position:relative;padding-top:18px}
+.step .num{font-family:var(--font-head);font-size:2.6rem;color:var(--lime);font-weight:700;line-height:1;
+  -webkit-text-stroke:1.5px var(--green-700);}
+.step h3{font-size:1.2rem;margin:10px 0 8px;color:var(--green-900)}
+.step p{font-size:.92rem;color:var(--muted)}
+
+/* Testimonials */
+.testi{background:var(--green-900);color:#fff}
+.testi .sec-head h2{color:#fff}
+.testi .sec-head p{color:rgba(255,255,255,.7)}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:920px;margin:0 auto}
+.tcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:28px}
+.tcard .stars{color:var(--lime);letter-spacing:2px;margin-bottom:14px}
+.tcard p{font-size:1rem;color:rgba(255,255,255,.9);margin-bottom:18px}
+.tcard .who{display:flex;align-items:center;gap:12px}
+.tcard .who .av{width:44px;height:44px;border-radius:50%;background:var(--green-500);display:grid;place-items:center;font-weight:700;color:#fff}
+.tcard .who strong{display:block;font-size:.95rem}
+.tcard .who span{font-size:.8rem;color:rgba(255,255,255,.6)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:start}
+.faq-item{border-bottom:1px solid var(--cream-2);padding:6px 0}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:var(--font-head);font-size:1.12rem;font-weight:600;color:var(--green-900)}
+.faq-q .pm{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;font-size:1.2rem;transition:.3s;color:var(--green-800)}
+.faq-item.open .pm{background:var(--lime);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.faq-a p{padding:0 0 18px}
+
+/* CTA */
+.cta{padding:0 0 90px}
+.cta-box{
+  background:linear-gradient(135deg,rgba(19,83,76,.93),rgba(14,61,56,.95)),url('foto sobre.jpg') center/cover;
+  border-radius:32px;padding:64px 50px;text-align:center;color:#fff;position:relative;overflow:hidden;
+}
+.cta-box::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(237,94,110,.22);top:-120px;right:-80px}
+.cta-box::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(105,179,166,.20);bottom:-110px;left:-60px}
+.cta-box h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;position:relative}
+.cta-box p{color:rgba(255,255,255,.88);max-width:520px;margin:0 auto 30px;font-size:1.1rem;position:relative}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+
+/* Footer */
+footer{background:var(--green-900);color:rgba(255,255,255,.7);padding:60px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid h4{color:#fff;font-family:var(--font-head);font-size:1.1rem;margin-bottom:16px}
+.foot-grid a,.foot-grid p{display:block;font-size:.92rem;margin-bottom:10px;transition:color .2s}
+.foot-grid a:hover{color:var(--lime)}
+.foot-brand .brand{margin-bottom:14px}
+.foot-brand .brand .wm{color:#f4838f}
+.foot-brand .brand small{color:#9a9da3}
+.foot-brand p{max-width:300px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem}
+
+/* WhatsApp float */
+.wa-float{position:fixed;right:22px;bottom:96px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(37,211,102,.6);transition:transform .25s;animation:pulse 2.4s infinite}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* Chat widget */
+.chat-launch{position:fixed;right:22px;bottom:24px;z-index:56;display:flex;align-items:center;gap:10px;background:var(--green-800);color:#fff;border:none;cursor:pointer;padding:12px 20px 12px 14px;border-radius:999px;box-shadow:var(--shadow);font-family:var(--font-body);font-weight:700;font-size:.95rem;transition:transform .25s}
+.chat-launch:hover{transform:translateY(-3px)}
+.chat-launch .av{width:34px;height:34px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-size:1.1rem}
+.chat-launch .ping{width:9px;height:9px;background:var(--lime);border-radius:50%;position:absolute;top:10px;left:34px;box-shadow:0 0 0 3px var(--green-800)}
+.chat-panel{position:fixed;right:22px;bottom:24px;z-index:57;width:370px;max-width:calc(100vw - 32px);height:560px;max-height:calc(100vh - 48px);background:var(--cream);border-radius:24px;box-shadow:0 30px 70px -20px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;animation:slideup .35s ease}
+.chat-panel.open{display:flex}
+@keyframes slideup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.chat-head{background:var(--green-800);color:#fff;padding:18px 18px;display:flex;align-items:center;gap:12px}
+.chat-head .av{width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+.chat-head strong{display:block;font-size:1rem;font-family:var(--font-head)}
+.chat-head span{font-size:.78rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px}
+.chat-head span .on{width:8px;height:8px;background:var(--lime);border-radius:50%}
+.chat-head .close{margin-left:auto;background:rgba(255,255,255,.12);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+.chat-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:84%;padding:11px 15px;border-radius:16px;font-size:.93rem;line-height:1.5;animation:msgin .3s ease}
+@keyframes msgin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.msg.bot{background:#fff;color:var(--ink);border-bottom-left-radius:5px;align-self:flex-start;box-shadow:var(--shadow-soft)}
+.msg.user{background:var(--green-700);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 14px}
+.chip{background:#fff;border:1.5px solid var(--cream-2);color:var(--green-800);font-family:var(--font-body);font-weight:600;font-size:.83rem;padding:8px 14px;border-radius:999px;cursor:pointer;transition:.2s}
+.chip:hover{background:var(--green-800);color:#fff;border-color:var(--green-800)}
+.chip.wa{background:#25d366;color:#fff;border-color:#25d366}
+.chat-foot{padding:12px 14px;border-top:1px solid var(--cream-2);display:flex;gap:8px;background:var(--cream)}
+.chat-foot input{flex:1;border:1.5px solid var(--cream-2);border-radius:999px;padding:11px 16px;font-family:var(--font-body);font-size:.92rem;outline:none}
+.chat-foot input:focus{border-color:var(--green-500)}
+.chat-foot button{background:var(--green-800);border:none;color:#fff;width:42px;height:42px;border-radius:50%;cursor:pointer;display:grid;place-items:center;flex-shrink:0}
+.chat-foot button svg{width:18px;height:18px;fill:#fff}
+.typing{display:flex;gap:4px;padding:14px 16px;background:#fff;border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start;box-shadow:var(--shadow-soft);width:fit-content}
+.typing span{width:7px;height:7px;background:var(--green-500);border-radius:50%;animation:blink 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+
+/* Reveal animation (entra no carregamento, sempre visível) */
+.reveal{animation:revealUp .8s ease both}
+@keyframes revealUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.reveal{animation:none}}
+
+/* Responsive */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:54px}
+  .hero-visual{max-width:420px;margin:0 auto}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-photo{max-width:420px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .spec-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr;gap:24px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .35s ease;box-shadow:var(--shadow);padding:40px}
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{font-size:1.2rem}
+  .menu-toggle{display:flex}
+  .nav-cta .btn{display:none}
+  .float-card.solo{left:10px;bottom:14px}
+  .svc-grid{grid-template-columns:1fr}
+  .spec-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .cta-box{padding:46px 24px}
+  .pad{padding:64px 0}
+  .hero{padding:130px 0 70px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <span class="mark"><img src="logo-simbolo.png" alt="Talita Moretti — símbolo" /></span>
+      <span class="wm">Talita Moretti<small>Personal Trainer</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn-dark">Entre em contato</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow">Personal Trainer · Blumenau/SC</span>
+      <h1>Treino feito <span class="accent">pra você</span>, com resultado de verdade.</h1>
+      <p class="lead">Treinamento personalizado presencial ou online, prescrito respeitando seus objetivos, seu histórico de saúde e a sua rotina. Comece com segurança e acompanhamento profissional.</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-primary">Entre em contato</a>
+        <a href="#sobre" class="btn btn-outline">Conheça mais</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>15</strong><span>anos de experiência</span></div>
+        <div class="stat"><strong>3</strong><span>especializações</span></div>
+        <div class="stat"><strong>100%</strong><span>treino individualizado</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-photo">
+        <div class="photo-fallback"><span class="big">Talita Moretti</span>Personal Trainer em Blumenau/SC</div>
+        <img src="foto%20retrato.jpg" alt="Talita Moretti, personal trainer, em Blumenau/SC" loading="eager" />
+      </div>
+      <div class="float-card solo" id="heroCard">
+        <span class="ic" id="hcIcon">🎯</span>
+        <div><b id="hcTitle">Avaliação completa</b><small id="hcSub">Anamnese individualizada</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="container">
+    <span><span class="dot">●</span> Graduada em Educação Física (FURB)</span>
+    <span><span class="dot">●</span> Especialista em Fisiologia do Exercício</span>
+    <span><span class="dot">●</span> Certificação Internacional ISAK</span>
+    <span><span class="dot">●</span> Grupos especiais, gestantes e idosos</span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="pad" id="sobre">
+  <div class="container about-grid">
+    <div class="about-photo reveal">
+      <div class="photo-fallback"><span class="big">📷</span>Foto da Talita</div>
+      <img src="foto%20sobre.jpg" alt="Talita Moretti orientando uma aluna" loading="lazy" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem vai te treinar</span>
+      <h2 style="font-size:clamp(2rem,3.8vw,2.9rem);color:var(--green-900);margin:14px 0 16px">Experiência, ciência e atenção à sua individualidade</h2>
+      <p style="color:var(--muted);font-size:1.05rem">Oi, eu sou a Talita! Me formei em Educação Física na FURB, em Blumenau, e sempre fui apaixonada pela área da saúde. Ao fazer as minhas especializações em Fisiologia do Exercício e Treinamento para Grupos Especiais, tive a convicção do quanto o exercício físico é uma ferramenta valiosa para vivermos melhor, ter mais disposição física, prevenir doenças e até mesmo tratá-las! Cada fase da vida exige um treinamento certo pra você. Seu metabolismo, suas articulações, sua rotina merecem um programa de treino totalmente personalizado, e é então que o resultado aparece. Fico muito grata em poder ajudar!</p>
+      <div class="about-credentials">
+        <div class="cred"><strong>Educação Física</strong><span>FURB — Blumenau/SC</span></div>
+        <div class="cred"><strong>Fisiologia do Exercício</strong><span>Univ. Gama Filho — RJ</span></div>
+        <div class="cred"><strong>Grupos Especiais</strong><span>Univ. Estácio — SP</span></div>
+        <div class="cred"><strong>Avaliação ISAK</strong><span>Certificação internacional</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="pad services" id="servicos">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">O que eu ofereço</span>
+      <h2>Escolha o formato que cabe na sua vida</h2>
+      <p>Do acompanhamento presencial à consultoria 100% online, todos os planos partem de uma avaliação individual.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc feature reveal">
+        <span class="badge">Mais procurado</span>
+        <span class="svc-ic">💻</span>
+        <h3>Consultoria Online</h3>
+        <p class="svc-desc">Tenha o treino perfeito pra você na palma da sua mão. Faça os exercícios nos horários que se encaixam na sua rotina!</p>
+        <ul class="svc-list">
+          <li>Anamnese detalhada online</li>
+          <li>Rotina de treino individualizada no aplicativo</li>
+          <li>Canal direto com a personal para tirar dúvidas e fazer modificações</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Quero a consultoria</a>
+      </div>
+
+      <div class="svc reveal">
+        <span class="svc-ic">📍</span>
+        <h3>Consultoria Presencial</h3>
+        <p class="svc-desc">Comece com avaliação e aula presenciais, e siga com seu treino no aplicativo.</p>
+        <ul class="svc-list">
+          <li>Avaliação física detalhada presencial</li>
+          <li>Prescrição do treino e acesso ao aplicativo</li>
+          <li>1 aula presencial para explicar os exercícios, corrigir a postura e fazer as adaptações necessárias</li>
+          <li>Canal direto com a personal ao longo do mês para tirar dúvidas e fazer modificações</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline">Saber mais</a>
+      </div>
+
+      <div class="svc reveal">
+        <span class="svc-ic">🏋️‍♀️</span>
+        <h3>Personal Presencial</h3>
+        <p class="svc-desc">Acompanhamento individual, em dupla ou trio.</p>
+        <ul class="svc-list">
+          <li>Na academia do seu condomínio ou residência</li>
+          <li>Treino individualizado de acordo com o seu objetivo</li>
+          <li>Horários fixos semanais</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline">Saber mais</a>
+      </div>
+
+      <div class="svc reveal">
+        <span class="svc-ic">⚡</span>
+        <h3>Power 20</h3>
+        <p class="svc-desc">Treinos rápidos de casa para mães de bebês e crianças pequenas que querem voltar a se movimentar.</p>
+        <ul class="svc-list">
+          <li>Foco em emagrecimento e disposição</li>
+          <li>Exercícios com o que você já tem em casa</li>
+          <li>Conteúdos extras sobre rotina saudável</li>
+        </ul>
+        <a href="#contato" class="btn btn-soon">⏳ Nova turma em breve</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="pad spec" id="especialidades">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Atendimento individualizado</span>
+      <h2>Especialidades para cada objetivo e fase da vida</h2>
+      <p>Todo treino é prescrito a partir da sua avaliação, respeitando seu histórico de saúde e suas particularidades.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec-card c reveal"><span class="si">🔥</span><div><h3>Emagrecimento</h3><p>Potencialize seus resultados com treinos de alto gasto calórico e que aceleram o seu metabolismo.</p></div></div>
+      <div class="spec-card t reveal"><span class="si">💪</span><div><h3>Hipertrofia e definição</h3><p>Aumente sua massa muscular para ter mais saúde, disposição física e força para as atividades do dia a dia.</p></div></div>
+      <div class="spec-card c reveal"><span class="si">🤰</span><div><h3>Gestantes e pós-parto</h3><p>Orientação específica para cada fase gestacional e primeiros 3 meses após o parto.</p></div></div>
+      <div class="spec-card t reveal"><span class="si">🦵</span><div><h3>Tratamento de dor e lesões articulares</h3><p>Mobilidade e fortalecimento muscular para prevenção e tratamento de dores e continuidade após a fisioterapia.</p></div></div>
+      <div class="spec-card c reveal"><span class="si">❤️</span><div><h3>Grupos especiais</h3><p>Tratamento de diabetes, hipertensão arterial, doenças metabólicas e cardiovasculares através do exercício. Atendimento a pacientes oncológicos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="pad" id="como-funciona">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Simples e seguro</span>
+      <h2>Como começar a treinar</h2>
+      <p>Em quatro passos você sai do zero para um plano de treino feito sob medida.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Primeiro contato</h3><p>Você fala comigo pelo WhatsApp ou pelo chat e a gente entende o seu momento e objetivo.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Avaliação & anamnese</h3><p>Avaliação física e histórico de saúde detalhados para um plano seguro e individualizado.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Seu plano de treino</h3><p>Prescrição personalizada — presencial ou no app, com vídeos de cada exercício.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Acompanhamento</h3><p>Ajustes ao longo do mês e nova periodização para você continuar evoluindo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="pad testi" id="depoimentos">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center;color:var(--lime)">Quem treina, recomenda</span>
+      <h2>Resultados que vêm com acompanhamento</h2>
+      <p>Avaliações reais de alunas e alunos no Google.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Melhor personal trainer de Blumenau. Tenho aula com ela há mais de 10 anos. Uma profissional incrível, sempre buscando aperfeiçoamento para atender com excelência."</p>
+        <div class="who"><span class="av">K</span><div><strong>Karina R. dos Santos</strong><span>Aluna há 10+ anos · Google</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Ela se destaca pela habilidade interpessoal e empatia, um reflexo direto da capacidade de motivar e criar um ambiente de treino positivo e encorajador."</p>
+        <div class="who"><span class="av">J</span><div><strong>Juliana Caio</strong><span>Avaliação no Google</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Muito bom! Experiência fantástica. Super atenciosa e dedicada. Indico muito!"</p>
+        <div class="who"><span class="av">E</span><div><strong>Edilaine Boing Vendrami</strong><span>Avaliação no Google</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Ótima profissional, extremamente dedicada e atenciosa às nossas necessidades e objetivos."</p>
+        <div class="who"><span class="av">D</span><div><strong>Daniela Gruber</strong><span>Avaliação no Google</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad" id="faq">
+  <div class="container faq-grid">
+    <div class="reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 style="font-size:clamp(2rem,3.8vw,2.7rem);color:var(--green-900);margin:14px 0 16px">Antes de começar</h2>
+      <p style="color:var(--muted)">Não encontrou sua resposta? Fale comigo no chat ou no WhatsApp — respondo pessoalmente.</p>
+      <a href="#contato" class="btn btn-dark" style="margin-top:22px">Falar comigo</a>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><button class="faq-q">Como funciona a Consultoria Online?<span class="pm">+</span></button><div class="faq-a"><p>Fazemos uma anamnese completa por vídeo chamada, eu monto seu planejamento e marcamos uma aula online para ensinar e corrigir os exercícios. Você recebe tudo num app com vídeos e tem meu contato direto durante o mês. A cada 30 dias renovamos a periodização.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Preciso ter experiência ou equipamentos?<span class="pm">+</span></button><div class="faq-a"><p>Não. Os treinos são adaptados ao seu nível de condicionamento e podem usar materiais que você já tem em casa. Iniciantes são muito bem-vindos.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Atende grupos especiais (gestantes, idosos, hipertensos)?<span class="pm">+</span></button><div class="faq-a"><p>Sim. Tenho especialização em exercícios para grupos especiais e reabilitação, com prescrição segura para gestantes, idosos e pessoas com diabetes, hipertensão e obesidade.</p></div></div>
+      <div class="faq-item"><button class="faq-q">O treino presencial é onde?<span class="pm">+</span></button><div class="faq-a"><p>Pode ser na academia do seu condomínio ou em local combinado, de forma individual ou em pequenos grupos, em Blumenau e região.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Quanto custa?<span class="pm">+</span></button><div class="faq-a"><p>O valor depende do formato (presencial, online ou Power 20) e da frequência. O melhor é falar comigo pelo WhatsApp ou pelo chat para um orçamento sob medida.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contato">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Pronta(o) para começar?</h2>
+      <p>Agende sua avaliação e dê o primeiro passo para um treino feito pra você — com segurança, ciência e acompanhamento de verdade.</p>
+      <div class="cta-actions">
+        <a id="waCta" href="#" class="btn btn-primary">💬 Entre em contato pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mark"><img src="logo-simbolo.png" alt="Talita Moretti — símbolo" /></span><span class="wm">Talita Moretti<small>Personal Trainer</small></span></a>
+        <p>Treinamento personalizado presencial e online em Blumenau/SC. Resultados com individualidade, segurança e acompanhamento profissional.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#faq">Dúvidas frequentes</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a id="waFoot" href="#">WhatsApp: (47) 99936-0095</a>
+        <a href="mailto:contato@talitamoretti.com.br">contato@talitamoretti.com.br</a>
+        <p>Blumenau · Santa Catarina</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Talita Moretti — Personal Trainer</span>
+      <span>Feito com foco em você 💪</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a id="waFloat" class="wa-float" href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- CHAT LAUNCHER -->
+<button class="chat-launch" id="chatLaunch">
+  <span class="av">💬</span>
+  <span class="ping"></span>
+  Tire suas dúvidas
+</button>
+
+<!-- CHAT PANEL -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <span class="av">🤖</span>
+    <div>
+      <strong>Assistente da Talita</strong>
+      <span><span class="on"></span> Online agora · responde na hora</span>
+    </div>
+    <button class="close" id="chatClose">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chips" id="chatChips"></div>
+  <div class="chat-foot">
+    <input id="chatInput" type="text" placeholder="Escreva sua dúvida..." autocomplete="off" />
+    <button id="chatSend" aria-label="Enviar"><svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></button>
+  </div>
+</div>
+
+<script>
+/* ====== CONFIG ====== */
+const WHATSAPP_NUMBER = "5547999360095"; // (47) 99936-0095
+const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+const defaultWa = waLink("Olá Talita! Vim pelo site e gostaria de mais informações.");
+["waCta","waFoot","waFloat"].forEach(id=>{const e=document.getElementById(id); if(e) e.href=defaultWa;});
+const _wc=document.getElementById("waCta"); if(_wc) _wc.href=waLink("Olá Talita! Quero agendar uma avaliação. Pode me ajudar?");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ====== HERO CARD: revezamento de informações ====== */
+(function(){
+  const card=document.getElementById("heroCard");
+  if(!card) return;
+  const icon=document.getElementById("hcIcon"), title=document.getElementById("hcTitle"), sub=document.getElementById("hcSub");
+  const items=[
+    {ic:"🎯",t:"Avaliação completa",s:"Anamnese individualizada"},
+    {ic:"📱",t:"Treino no app",s:"Vídeos de cada exercício"},
+    {ic:"💬",t:"Acompanhamento direto",s:"Contato com a personal no mês"},
+    {ic:"❤️",t:"Treino seguro",s:"Para cada objetivo e fase"}
+  ];
+  let i=0;
+  setInterval(()=>{
+    i=(i+1)%items.length;
+    card.style.opacity="0"; card.style.transform="translateY(8px)";
+    setTimeout(()=>{
+      icon.textContent=items[i].ic; title.textContent=items[i].t; sub.textContent=items[i].s;
+      card.style.opacity="1"; card.style.transform="none";
+    },550);
+  },5000);
+})();
+
+/* ====== HEADER + MENU ====== */
+const header = document.getElementById("header");
+window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>30));
+const navLinks=document.getElementById("navLinks"), menuToggle=document.getElementById("menuToggle");
+menuToggle.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+/* ====== FAQ ====== */
+document.querySelectorAll(".faq-q").forEach(q=>{
+  q.addEventListener("click",()=>{
+    const item=q.parentElement;
+    const a=item.querySelector(".faq-a");
+    const open=item.classList.toggle("open");
+    a.style.maxHeight = open ? a.scrollHeight+"px" : null;
+  });
+});
+
+/* ====== CHAT ASSISTANT (FAQ inteligente) ====== */
+const chatLaunch=document.getElementById("chatLaunch");
+const chatPanel=document.getElementById("chatPanel");
+const chatClose=document.getElementById("chatClose");
+const chatBody=document.getElementById("chatBody");
+const chatChips=document.getElementById("chatChips");
+const chatInput=document.getElementById("chatInput");
+const chatSend=document.getElementById("chatSend");
+let started=false;
+
+const KB = [
+  {keys:["consultoria","online","app","aplicativo","distancia","distância","remoto"],
+   answer:"A <b>Consultoria Online</b> é o formato mais procurado! 🎯<br>Funciona assim: fazemos uma anamnese por vídeo chamada, eu monto seu plano e marcamos uma aula online pra te ensinar os exercícios. Você recebe tudo num <b>app com vídeos</b> e tem meu contato direto durante o mês. A cada 30 dias renovamos o treino."},
+  {keys:["presencial","academia","condominio","condomínio","blumenau","perto","local"],
+   answer:"No <b>Personal Presencial</b> eu te acompanho individualmente ou em pequenos grupos — pode ser na academia do seu condomínio ou em local combinado, aqui em Blumenau e região. 🏋️‍♀️ Correção de postura em tempo real e treino 100% individualizado."},
+  {keys:["power","power20","power 20","mae","mãe","gravidez","pos parto","pós parto","casa","rapido","rápido","bebe","bebê"],
+   answer:"O <b>Power 20</b> é pra você, mãe de bebê ou criança pequena, que quase não tem tempo. ⚡ São treinos rápidos pra fazer em casa, com foco em emagrecimento, disposição e fortalecimento — usando o que você já tem aí. Posso te avisar da próxima turma!"},
+  {keys:["preço","preco","valor","valores","quanto","custa","custo","investimento","plano","planos","mensalidade"],
+   answer:"Os <b>valores</b> dependem do formato (presencial, online ou Power 20) e da frequência semanal. 💬 Pra te passar um valor certinho e sob medida, o ideal é falar comigo no WhatsApp. Quer que eu te encaminhe?", showWa:true},
+  {keys:["avaliacao","avaliação","anamnese","começar","comecar","inicio","início","agendar","agenda","marcar"],
+   answer:"Pra começar é simples: agendamos uma <b>avaliação física e anamnese</b> pra entender seus objetivos e seu histórico de saúde. Com isso eu monto um treino seguro e individualizado. 📋 Vamos agendar a sua?", showWa:true},
+  {keys:["iniciante","nunca","experiencia","experiência","equipamento","equipamentos","sedentario","sedentário"],
+   answer:"Pode ficar tranquila(o)! 😊 Não precisa de experiência nem de equipamentos. Os treinos são adaptados ao seu nível e podem usar o que você já tem em casa. Iniciantes são super bem-vindos."},
+  {keys:["gestante","gravida","grávida","idoso","idosa","hipertensao","hipertensão","diabetes","obesidade","reabilitacao","reabilitação","cardiaca","cardíaca","especial","saude","saúde"],
+   answer:"Sim! Tenho <b>especialização em grupos especiais</b> e reabilitação. ❤️ Faço prescrição segura para gestantes, idosos e pessoas com hipertensão, diabetes ou obesidade. Tudo com base na sua avaliação."},
+  {keys:["horario","horário","horarios","horários","dia","dias","flexivel","flexível","rotina","tempo"],
+   answer:"A flexibilidade é um dos pontos fortes! ⏰ Você escolhe os dias e horários. Na Consultoria Online você treina quando der na sua rotina, e no presencial a gente combina os melhores horários."},
+  {keys:["quem","talita","formacao","formação","experiente","curriculo","currículo","confiar"],
+   answer:"A Talita é graduada em Educação Física (FURB), especialista em <b>Fisiologia do Exercício</b> e em <b>Grupos Especiais</b>, com certificação internacional ISAK em avaliação corporal. 💪 Mais de 15 anos cuidando da saúde e do treino dos alunos."},
+  {keys:["whatsapp","whats","zap","telefone","contato","falar","atendente"],
+   answer:"Claro! Você pode falar diretamente com a Talita pelo WhatsApp. 👇", showWa:true},
+];
+
+const SUGGESTIONS = [
+  {label:"Como funciona a Consultoria Online?", q:"consultoria online"},
+  {label:"Quais os valores?", q:"valores"},
+  {label:"Quero agendar avaliação", q:"agendar avaliação"},
+  {label:"Atende gestantes/idosos?", q:"gestante idoso"},
+];
+
+function scrollChat(){chatBody.scrollTop=chatBody.scrollHeight;}
+function addMsg(text,who="bot"){
+  const d=document.createElement("div");
+  d.className="msg "+who;
+  d.innerHTML=text;
+  chatBody.appendChild(d);
+  scrollChat();
+}
+function showTyping(){
+  const t=document.createElement("div");
+  t.className="typing";t.id="typing";
+  t.innerHTML="<span></span><span></span><span></span>";
+  chatBody.appendChild(t);scrollChat();
+}
+function hideTyping(){const t=document.getElementById("typing");if(t)t.remove();}
+
+function renderChips(list){
+  chatChips.innerHTML="";
+  list.forEach(c=>{
+    const b=document.createElement("button");
+    b.className="chip"+(c.wa?" wa":"");
+    b.innerHTML=c.label;
+    b.addEventListener("click",c.action);
+    chatChips.appendChild(b);
+  });
+}
+function defaultChips(){
+  renderChips(SUGGESTIONS.map(s=>({label:s.label,action:()=>handleUser(s.q,s.label)})));
+}
+function waChip(prefill){
+  return {label:"💬 Abrir WhatsApp",wa:true,action:()=>window.open(waLink(prefill||"Olá Talita! Vim pelo site e quero mais informações."),"_blank")};
+}
+
+function botReply(query){
+  const q=query.toLowerCase();
+  let match=null,score=0;
+  KB.forEach(item=>{
+    const s=item.keys.reduce((acc,k)=>acc+(q.includes(k)?1:0),0);
+    if(s>score){score=s;match=item;}
+  });
+  showTyping();
+  setTimeout(()=>{
+    hideTyping();
+    if(match && score>0){
+      addMsg(match.answer);
+      const chips=[];
+      if(match.showWa) chips.push(waChip("Olá Talita! Vim pelo site, vamos conversar?"));
+      chips.push({label:"Outras dúvidas",action:()=>{addMsg("Sobre o que mais posso te ajudar? 😊");defaultChips();}});
+      renderChips(chips);
+    }else{
+      addMsg("Boa pergunta! 🤔 Não tenho certeza sobre isso, mas a Talita responde rapidinho. Quer falar diretamente com ela?");
+      renderChips([waChip("Olá Talita! Tenho uma dúvida: "+query), {label:"Ver outras dúvidas",action:defaultChips}]);
+    }
+  }, 650+Math.random()*500);
+}
+
+function handleUser(text,labelOverride){
+  if(!text.trim())return;
+  addMsg(labelOverride||text,"user");
+  chatChips.innerHTML="";
+  botReply(text);
+}
+
+function startChat(){
+  if(started)return;started=true;
+  setTimeout(()=>addMsg("Oi! 👋 Eu sou o assistente virtual da <b>Talita Moretti</b>."),250);
+  setTimeout(()=>{addMsg("Posso te ajudar com informações sobre os treinos, a consultoria online, valores e agendamento. Sobre o que você quer saber?");defaultChips();},900);
+}
+
+function openChat(){chatPanel.classList.add("open");chatLaunch.style.display="none";startChat();chatInput.focus();}
+function closeChat(){chatPanel.classList.remove("open");chatLaunch.style.display="flex";}
+chatLaunch.addEventListener("click",openChat);
+chatClose.addEventListener("click",closeChat);
+chatSend.addEventListener("click",()=>{handleUser(chatInput.value);chatInput.value="";});
+chatInput.addEventListener("keydown",e=>{if(e.key==="Enter"){handleUser(chatInput.value);chatInput.value="";}});
+</script>
+</body>
+</html>
